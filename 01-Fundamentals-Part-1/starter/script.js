@@ -5,7 +5,6 @@ let js = "amazing";
 console.log(40 + 8 + 23 - 10);
 //alert("lofasz");
 
-/*
 ////////////////////////////////////
 // Values and Variables
 console.log("Jonas");
@@ -32,6 +31,7 @@ let job2 = "teacher";
 
 console.log(myFirstJob);
 
+/*
 ////////////////////////////////////
 // Data Types
 let javascriptIsFun = true;
