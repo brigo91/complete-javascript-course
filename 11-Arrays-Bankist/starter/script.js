@@ -77,6 +77,13 @@ const displayMovements = function(movements){
   });
 };
 displayMovements(account1.movements);
+
+const calcDisplayBalance = function(movements){
+  const balance = movements.reduce( (acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
+
+calcDisplayBalance(account1.movements);
  
 
 const createsUsernames = function(accs){
@@ -114,3 +121,11 @@ console.log(deposit);
 
 const withdrawals = movements.filter(mov => mov < 0);
 console.log(withdrawals);
+
+
+const balance = movements.reduce((acc, cur) => acc + cur, 0);
+console.log(balance);
+
+//Max value
+const max = movements.reduce((acc, cur) => cur > acc ? cur : acc, movements[0]);
+console.log(max);
