@@ -69,3 +69,49 @@ document
     //message.remove();
     message.parentElement.removeChild(message);
   })
+
+// Styles
+
+message.style.backgroundColor = '#37383d';
+message.style.width = '120%';
+
+console.log(message.style.color); //can not be logged beacause not added via script
+console.log(message.style.backgroundColor); //this can be logged
+
+console.log(getComputedStyle(message).color);
+console.log(getComputedStyle(message).height);
+
+message.style.height = 
+  Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px';
+
+document.documentElement.style.setProperty('--color-primary', 'orangered');
+
+//Atributes
+const logo = document.querySelector('.nav__logo');
+console.log(logo.alt);
+console.log(logo.src);
+console.log(logo.className);
+
+logo.alt = 'Beautiful minimalist logo'
+console.log(logo.designer); //not works on nonstandard attributes
+console.log(logo.getAttribute('designer'));
+logo.setAttribute('companmy', 'Bankist') //name, value
+
+console.log(logo.src);                  //absoulut path
+console.log(logo.getAttribute('src'));  //relative path
+
+const link = document.querySelector('.nav__link--btn');
+console.log(link.href);
+console.log(link.getAttribute('href'));
+
+//Data attributes
+console.log(logo.dataset.versionNumber); //camel case instead of dash (see html)
+
+//Classes
+logo.classList.add('c', 'j');
+logo.classList.remove('c', 'j');
+logo.classList.toggle('c');
+logo.classList.contains('c');
+
+//Do not use
+//logo.className = 'jonas';
