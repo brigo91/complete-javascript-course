@@ -35,3 +35,7 @@ console.log(Person.prototype.isPrototypeOf(matilda));
 console.log(Person.prototype.isPrototypeOf(Person));
 
 Person.prototype.pieces = 'Homo sapiens';
+console.log(jonas.__proto__.__proto__.__proto__);
+const h1 = document.querySelector('h1');
+console.dir(h1);
+console.dir((x)=>x+1);
