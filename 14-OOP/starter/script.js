@@ -39,3 +39,23 @@ console.log(jonas.__proto__.__proto__.__proto__);
 const h1 = document.querySelector('h1');
 console.dir(h1);
 console.dir((x)=>x+1);
+
+//Coding challenge
+const Car = function(speed){
+	this.speed = speed;
+}
+
+Car.prototype.accelerate = function(){
+	this.speed += 10;
+	console.log(this.speed);
+}
+
+Car.prototype.break = function(){
+	this.speed -= 5;
+	console.log(this.speed);
+}
+
+const bmw = new Car(10);
+bmw.accelerate();
+bmw.break();
+bmw.break();
